@@ -25,7 +25,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Tdy\\pdf\\": "src/"
+      "tdy\\pdf\\": "src/"
     }
   }
 }

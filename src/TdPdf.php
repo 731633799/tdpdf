@@ -6,7 +6,7 @@
  * Email: 731633799@qq.com
  * License:  MIT
  **/
-namespace tdy;
+namespace tdy\pdf;
 
 use setasign\Fpdi\Tfpdf\Fpdi;
 
