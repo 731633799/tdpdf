@@ -7,6 +7,6 @@ PDF文件处理 添加文字水印 添加图片 添加图片旋转
 
 ## 使用方法
 
-`use tdy\pdf;`
+`use tdy\pdf\TdPdf;`
 
-`(new Tdy\TdPdf())->example();`
+`(new TdPdf())->example();`
