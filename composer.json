@@ -1,0 +1,32 @@
+{
+  "name": "tdy/pdf",
+  "version": "1.0.0",
+  "description": "PDF文件处理 添加文字水印 添加图片以及图片旋转",
+  "keywords": [
+    "TdY",
+    "DoubleY",
+    "pdf",
+    "tdpdf",
+    "pdf helper",
+    "731633799"
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "setasign/fpdi": ">=1.2",
+    "setasign/tfpdf": ">=1.2"
+  },
+  "authors": [
+    {
+      "name": "DoubleY",
+      "email": "731633799@qq.com",
+      "homepage": "https://github.com/731633799"
+    }
+  ],
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "tdy\\TdPdf\\": "src/"
+    }
+  }
+}
