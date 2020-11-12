@@ -6,7 +6,7 @@
  * Email: 731633799@qq.com
  * License:  MIT
  **/
-namespace tdy\pdf;
+namespace tdy;
 
 use setasign\Fpdi\Tfpdf\Fpdi;
 
@@ -203,8 +203,6 @@ class TdPdf extends Fpdi
         $pdf->Output();
     }
 }
-
-(new TdPDF())->example();
 
 
 

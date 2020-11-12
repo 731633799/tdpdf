@@ -1,6 +1,6 @@
 {
   "name": "tdy/pdf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PDF文件处理 添加文字水印 添加图片以及图片旋转",
   "keywords": [
     "TdY",
@@ -23,7 +23,6 @@
     }
   ],
   "license": "MIT",
-  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Tdy\\": "src/"
