@@ -91,7 +91,7 @@ class TdPdf extends Fpdi
      * @param int $water_image_width  水印背景图片宽
      * @param int $water_image_height 水印背景图片高
      * */
-    public function textWater($text="TD水印",$fontSize=20,$angle=45,$space=100,$water_image_width=794,$water_image_height=1123)
+    public function textWater($text="TdPDF水印",$fontSize=20,$angle=45,$space=100,$water_image_width=794,$water_image_height=1123)
     {
         $md5= md5($text);
         if(isset($this->water_images[$md5])){
@@ -187,23 +187,23 @@ class TdPdf extends Fpdi
     public function example()
     {
         $pdf = $this;
-        $pdf->setFontTtfFile("E:/phpstudy_pro/WWW/video/Ali.ttf");
-        $pages = $pdf->setSourceFile("pdfpdf.pdf");
+        $func = new \ReflectionClass($pdf);
+        $static_idr=  dirname($func->getFileName(),2).DIRECTORY_SEPARATOR.'static'.DIRECTORY_SEPARATOR;
+        $pdf->setFontTtfFile($static_idr.'Ali.ttf');
+        $pages = $pdf->setSourceFile($static_idr."tdpdf.pdf");
         $pdf->AddPage();
         $tplId = $pdf->importPage(1);
         $pdf->useTemplate($tplId);
-        $pdf->Write(5, "呵呵00");
-        $pdf->image('QQ.png', 0, 0, 100, 100);
+        $pdf->Write(5, "呵呵QWEr00");
+        $pdf->image($static_idr.'QQ.png', 100, 100);
         $pdf->setTextWaterPosition(0, 0, 0, 0);
         $pdf->textWater();
-        $pdf->image('qq.jpg', 0, 0, 0, 0,'','',100);
-        $pdf->image('QQ.png', 0, 0, 0, 0,'','',100);
+        $pdf->image($static_idr.'QQ.png', 150, 20, 0, 0,'','',90);
         $pdf->SetXY(100, 10);
-        $pdf->addText("添加文字");
+        $pdf->addText("文字描述");
         $pdf->Output();
     }
 }
-
 
 
 
