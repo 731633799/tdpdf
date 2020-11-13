@@ -1,6 +1,6 @@
 {
   "name": "tdy/pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PDF文件处理 添加文字水印 添加图片以及图片旋转",
   "keywords": [
     "TdY",

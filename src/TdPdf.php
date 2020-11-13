@@ -41,7 +41,7 @@ class TdPdf extends Fpdi
         if(file_exists($fontFile)){
             $fontFile && $this->fontFile=$fontFile;
             if(pathinfo($this->fontFile,PATHINFO_DIRNAME )){
-                define('_SYSTEM_TTFONTS',pathinfo($this->fontFile,PATHINFO_DIRNAME ));
+                define('_SYSTEM_TTFONTS',pathinfo($this->fontFile,PATHINFO_DIRNAME ).DIRECTORY_SEPARATOR);
             }
             $font_name=pathinfo($this->fontFile,PATHINFO_BASENAME);
             $font_family=pathinfo($this->fontFile,PATHINFO_FILENAME);
